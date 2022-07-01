@@ -2,7 +2,7 @@ const express = require('express');
 const socket = require('socket.io');
 
 const app = express();
-const server = app.listen(80, () => {
+const server = app.listen(8080, () => {
     console.log('Server Started..');
 });
 
