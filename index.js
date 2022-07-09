@@ -20,4 +20,17 @@ io.on("connection", (socket) => {
   socket.on("typing", (data) => {
     socket.broadcast.emit("typing", data);
   });
+
+  socket.on("fileshare", (data) => {
+    socket.broadcast.emit("fileshare", data);
+  });
+
+  socket.on("delete", (data) => {
+    socket.broadcast.emit("delete", data);
+  });
+
+  socket.on("endchat", (data) => {
+    socket.broadcast.emit("endchat", data);
+  });
+
 });

@@ -1,7 +1,12 @@
 <html>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js"></script>
-
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <script src="./chat.js"></script>
+  <title>Dakaas | Chat</title>
   <link
     rel="stylesheet"
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -12,14 +17,18 @@
   <script
     src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"
+    crossorigin="anonymous" 
   ></script>
+  
 
   <body class="container">
     <div class="row" style="padding-top: 20px">
-      <div class="col-7">
-        <h1>Radixweb group chat APP</h1>
+      <div class="col-7 d-flex" style="align-items: center;">
+        <h1 > Group chat APP </h1>
+        <button type="button" class="btn btn-primary " data-toggle="modal" data-target=".bd-example-modal-lg">?</button>
+
       </div>
+      <br>  
       <div class="col-5">
         <input
           type="text"
@@ -29,6 +38,8 @@
         />
       </div>
     </div>
+    <br>  
+
     <div id="mario-chat">
       <div class="card">
         <div
@@ -57,6 +68,39 @@
             Send
           </button>
         </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content p-5">
+          <div class="col-sm-12 col-md-8 col-xl-12 rounded-3 tutorial-content" id="mainContent">
+            <h1>What is a Socket?</h1>
+            <hr>
+            <div id="google-top-ads">
+            </div>
+            </div>
+            <br>
+            <div class="mui-container-fluid button-borders">
+            <div class="clearer"></div>
+            <p>Sockets allow communication between two different processes on the same or different machines. To be more precise, it's a way to talk to other computers using standard Unix file descriptors. In Unix, every I/O action is done by writing or reading a file descriptor. A file descriptor is just an integer associated with an open file and it can be a network connection, a text file, a terminal, or something else.</p>
+            <p>To a programmer, a socket looks and behaves much like a low-level file descriptor. This is because commands such as read() and write() work with sockets in the same way they do with files and pipes.</p>
+            <p>Sockets were first introduced in 2.1BSD and subsequently refined into their current form with 4.2BSD. The sockets feature is now available with most current UNIX system releases.</p>
+            <h2>Where is Socket Used?</h2>
+            <p>A Unix Socket is used in a client-server application framework. A server is a process that performs some functions on request from a client. Most of the application-level protocols like FTP, SMTP, and POP3 make use of sockets to establish connection between client and server and then for exchanging data.</p>
+            <h2>Socket Types</h2>
+            <p>There are four types of sockets available to the users. The first two are most commonly used and the last two are rarely used.</p>
+            <p>Processes are presumed to communicate only between sockets of the same type but there is no restriction that prevents communication between sockets of different types.</p>
+            <ul class="list">
+            <li><p><b>Stream Sockets</b> − Delivery in a networked environment is guaranteed. If you send through the stream socket three items "A, B, C", they will arrive in the same order − "A, B, C". These sockets use TCP (Transmission Control Protocol) for data transmission. If delivery is impossible, the sender receives an error indicator. Data records do not have any boundaries.</p></li>
+            <li><p><b>Datagram Sockets</b> − Delivery in a networked environment is not guaranteed. They're connectionless because you don't need to have an open connection as in Stream Sockets − you build a packet with the destination information and send it out. They use UDP (User Datagram Protocol).</p></li>
+            <li><p><b>Raw Sockets</b> − These provide users access to the underlying communication protocols, which support socket abstractions. These sockets are normally datagram oriented, though their exact characteristics are dependent on the interface provided by the protocol. Raw sockets are not intended for the general user; they have been provided mainly for those interested in developing new communication protocols, or for gaining access to some of the more cryptic facilities of an existing protocol.</p></li>
+            <li><p><b>Sequenced Packet Sockets</b> − They are similar to a stream socket, with the exception that record boundaries are preserved. This interface is provided only as a part of the Network Systems (NS) socket abstraction, and is very important in most serious NS applications. Sequenced-packet sockets allow the user to manipulate the Sequence Packet Protocol (SPP) or Internet Datagram Protocol (IDP) headers on a packet or a group of packets, either by writing a prototype header along with whatever data is to be sent, or by specifying a default header to be used with all outgoing data, and allows the user to receive the headers on incoming packets.</p></li>
+            </ul>
+            
+        </div>
+
       </div>
     </div>
   </body>
