@@ -71,6 +71,36 @@
       </div>
     </div>
 
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">How ?</button>
+
+<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="col-sm-12 col-md-8 col-xl-12 rounded-3 tutorial-content" id="mainContent">
+        <h3>Dependencies</h3 >
+          <br>
+          <div>
+            <ul>
+              <li>
+                Node
+              </li>
+              <li>
+                express
+              </li>
+              <li>
+                socket io
+              </li>
+              <li>
+                bootstrap
+              </li>
+              
+            </ul>
+          </div>
+    </div>
+    </div>
+  </div>
+</div>
+
 
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
@@ -98,9 +128,7 @@
             <li><p><b>Raw Sockets</b> − These provide users access to the underlying communication protocols, which support socket abstractions. These sockets are normally datagram oriented, though their exact characteristics are dependent on the interface provided by the protocol. Raw sockets are not intended for the general user; they have been provided mainly for those interested in developing new communication protocols, or for gaining access to some of the more cryptic facilities of an existing protocol.</p></li>
             <li><p><b>Sequenced Packet Sockets</b> − They are similar to a stream socket, with the exception that record boundaries are preserved. This interface is provided only as a part of the Network Systems (NS) socket abstraction, and is very important in most serious NS applications. Sequenced-packet sockets allow the user to manipulate the Sequence Packet Protocol (SPP) or Internet Datagram Protocol (IDP) headers on a packet or a group of packets, either by writing a prototype header along with whatever data is to be sent, or by specifying a default header to be used with all outgoing data, and allows the user to receive the headers on incoming packets.</p></li>
             </ul>
-            
         </div>
-
       </div>
     </div>
   </body>
